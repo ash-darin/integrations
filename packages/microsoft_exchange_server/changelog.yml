@@ -1,4 +1,9 @@
 # newer versions go on top
+- version: "1.0.3"
+  changes:
+    - description: Adjust fields extracted by ingest pipeline
+      type: bugfix
+      link: https://github.com/elastic/integrations/pull/?
 - version: "1.0.2"
   changes:
     - description: Adjust mapping to include related & error field
