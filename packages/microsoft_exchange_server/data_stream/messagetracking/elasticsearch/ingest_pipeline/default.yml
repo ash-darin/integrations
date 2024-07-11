@@ -52,6 +52,7 @@ processors:
     field: email.sender.address
     value: "{{{microsoft.exchange.senderaddress}}}"
     ignore_failure: true
+    ignore_empty_value: true
 - remove:
     field: microsoft.exchange.senderaddress
 - kv:
