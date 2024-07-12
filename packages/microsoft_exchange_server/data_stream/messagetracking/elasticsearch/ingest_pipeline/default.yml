@@ -22,7 +22,7 @@ processors:
     - microsoft.exchange.eventid
     - microsoft.exchange.internalmessageid
     - email.message_id
-    - microsoft.exchange.networkmessageid
+    - email.local_id
     - email.to.address
     - microsoft.exchange.recipientstatus
     - network.bytes
@@ -39,7 +39,7 @@ processors:
     - microsoft.exchange.originalserverip
     - microsoft.exchange.customdata
     - microsoft.exchange.transporttraffictype
-    - email.local_id
+    - microsoft.exchange.logid
     - microsoft.exchange.schemaversion
     if: ctx.message =~ /^\d/
 - split:
