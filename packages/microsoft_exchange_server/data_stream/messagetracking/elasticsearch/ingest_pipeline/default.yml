@@ -5,7 +5,8 @@ processors:
     if: "ctx.message =~ /^[^0-9]/ || ctx.message =~ /^#/"
 - set:
     field: event.original
-    value: "{{{message}}}"
+    ignore_empty_value: true
+    copy_from: message
 - csv:
     field: event.original
     ignore_failure: true
