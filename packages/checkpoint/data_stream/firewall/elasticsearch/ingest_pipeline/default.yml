@@ -172,10 +172,9 @@ processors:
   - fingerprint:
       if: ctx._id == null
       fields:
-        - '@timestamp'
         - checkpoint.loguid
         - checkpoint.time
-        - checkpoint.segment_time
+        - checkpoint.update_count
         - checkpoint.sequencenum
       target_field: "_id"
       ignore_missing: true
