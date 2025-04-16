@@ -176,6 +176,7 @@ processors:
         - checkpoint.time
         - checkpoint.update_count
         - checkpoint.sequencenum
+        - checkpoint.lastupdatetime
       target_field: "_id"
       ignore_missing: true
   - append:
