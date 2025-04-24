@@ -853,10 +853,12 @@ processors:
       field: checkpoint.packets
       type: long
       ignore_missing: true
+      if: ctx?.checkpoint?.packet_amount == null
   - rename:
       field: checkpoint.packets
       target_field: network.packets
       ignore_missing: true
+      if: ctx?.checkpoint?.packet_amount == null
   - rename:
       field: checkpoint.layer_name
       target_field: network.name
