@@ -6,9 +6,9 @@
                 "http_request": {
                     "bot": {
                         "detection_ids": [
-                            7,
-                            8,
-                            9
+                            "7",
+                            "8",
+                            "9"
                         ],
                         "score": {
                             "src": "Verified Bot",
@@ -84,7 +84,7 @@
                         "rate": {
                             "limit": {
                                 "action": "unknown",
-                                "id": 0
+                                "id": "0"
                             }
                         },
                         "request": {
@@ -172,7 +172,7 @@
                         }
                     },
                     "zone": {
-                        "id": 393347122,
+                        "id": "393347122",
                         "name": "example.com"
                     }
                 }
@@ -236,7 +236,7 @@
                     "number": 43766
                 },
                 "geo": {
-                    "country_iso_code": "sa"
+                    "country_iso_code": "SA"
                 },
                 "ip": "175.16.199.0",
                 "port": 0
@@ -281,7 +281,7 @@
                 "http_request": {
                     "bot": {
                         "detection_ids": [
-                            8
+                            "8"
                         ],
                         "score": {
                             "src": "Verified Bot",
@@ -358,7 +358,7 @@
                         "rate": {
                             "limit": {
                                 "action": "unknown",
-                                "id": 0
+                                "id": "0"
                             }
                         },
                         "request": {
@@ -446,7 +446,7 @@
                         }
                     },
                     "zone": {
-                        "id": 393347122,
+                        "id": "393347122",
                         "name": "example.com"
                     }
                 }
@@ -510,7 +510,7 @@
                     "number": 43766
                 },
                 "geo": {
-                    "country_iso_code": "sa"
+                    "country_iso_code": "SA"
                 },
                 "ip": "175.16.199.0",
                 "port": 0
@@ -628,7 +628,7 @@
                         "rate": {
                             "limit": {
                                 "action": "unknown",
-                                "id": 0
+                                "id": "0"
                             }
                         },
                         "request": {
@@ -716,7 +716,7 @@
                         }
                     },
                     "zone": {
-                        "id": 393347122,
+                        "id": "393347122",
                         "name": "example.com"
                     }
                 }
@@ -780,7 +780,7 @@
                     "number": 43766
                 },
                 "geo": {
-                    "country_iso_code": "sa"
+                    "country_iso_code": "SA"
                 },
                 "ip": "175.16.199.0",
                 "port": 0
@@ -898,7 +898,7 @@
                         "rate": {
                             "limit": {
                                 "action": "unknown",
-                                "id": 0
+                                "id": "0"
                             }
                         },
                         "request": {
@@ -1005,7 +1005,7 @@
                         }
                     },
                     "zone": {
-                        "id": 393347122,
+                        "id": "393347122",
                         "name": "example.com"
                     }
                 }
@@ -1069,7 +1069,7 @@
                     "number": 43766
                 },
                 "geo": {
-                    "country_iso_code": "sa"
+                    "country_iso_code": "SA"
                 },
                 "ip": "175.16.199.0",
                 "port": 0
@@ -1187,7 +1187,7 @@
                         "rate": {
                             "limit": {
                                 "action": "unknown",
-                                "id": 0
+                                "id": "0"
                             }
                         },
                         "request": {
@@ -1307,7 +1307,7 @@
                         }
                     },
                     "zone": {
-                        "id": 393347122,
+                        "id": "393347122",
                         "name": "example.com"
                     }
                 }
@@ -1372,7 +1372,7 @@
                     "number": 43766
                 },
                 "geo": {
-                    "country_iso_code": "sa"
+                    "country_iso_code": "SA"
                 },
                 "ip": "175.16.199.0",
                 "port": 0
@@ -1490,7 +1490,7 @@
                 "http_request": {
                     "bot": {
                         "detection_ids": [
-                            8
+                            "8"
                         ],
                         "detection_tags": [
                             "example"
@@ -1570,7 +1570,7 @@
                         "rate": {
                             "limit": {
                                 "action": "unknown",
-                                "id": 0
+                                "id": "0"
                             }
                         },
                         "request": {
@@ -1658,7 +1658,7 @@
                         }
                     },
                     "zone": {
-                        "id": 393347122,
+                        "id": "393347122",
                         "name": "example.com"
                     }
                 }
@@ -1722,7 +1722,7 @@
                     "number": 43766
                 },
                 "geo": {
-                    "country_iso_code": "sa"
+                    "country_iso_code": "SA"
                 },
                 "ip": "175.16.199.0",
                 "port": 0
@@ -1931,7 +1931,7 @@
                 },
                 "geo": {
                     "city_name": "Athens",
-                    "country_iso_code": "gr",
+                    "country_iso_code": "GR",
                     "region_iso_code": "I"
                 },
                 "ip": "1.128.0.0",
@@ -2110,7 +2110,7 @@
                         }
                     },
                     "zone": {
-                        "id": 393347122,
+                        "id": "393347122",
                         "name": "example.com"
                     }
                 }
@@ -2171,7 +2171,7 @@
                     "number": 12345
                 },
                 "geo": {
-                    "country_iso_code": "us"
+                    "country_iso_code": "US"
                 },
                 "ip": "203.0.113.99",
                 "port": 56450

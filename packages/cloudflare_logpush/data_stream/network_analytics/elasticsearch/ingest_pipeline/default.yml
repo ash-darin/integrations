@@ -326,11 +326,11 @@ processors:
       field: json.DestinationCountry
       target_field: cloudflare_logpush.network_analytics.destination.country
       ignore_missing: true
-  - set:
-      tag: set_destination_geo_country_iso_code_7ee5973d
-      field: destination.geo.country_iso_code
-      copy_from: cloudflare_logpush.network_analytics.destination.country
-      ignore_empty_value: true
+  - uppercase:
+      tag: uppercase_destination_geo_country_iso_code_7ee5973d
+      field: cloudflare_logpush.network_analytics.destination.country
+      target_field: destination.geo.country_iso_code
+      ignore_missing: true
   - rename:
       tag: rename_json_DestinationGeoHash_to_cloudflare_logpush_network_analytics_destination_geo_hash_3760770c
       field: json.DestinationGeoHash
@@ -775,11 +775,18 @@ processors:
       tag: split_IPv6ExtensionHeaders
       separator: ', *'
       if: ctx.json?.IPv6ExtensionHeaders instanceof String && ctx.json.IPv6ExtensionHeaders != ''
-  - rename:
-      tag: rename_json_IPv6ExtensionHeaders_to_cloudflare_logpush_network_analytics_ipv6_extension_headers_cdd8e128
+  - convert:
+      tag: convert_json_ipv6_extension_headers
       field: json.IPv6ExtensionHeaders
       target_field: cloudflare_logpush.network_analytics.ipv6.extension_headers
+      if: ctx.json?.IPv6ExtensionHeaders != ''
+      type: long
       ignore_missing: true
+      on_failure:
+        - append:
+            tag: append_error_message_cdd8e128
+            field: error.message
+            value: 'Processor {{{_ingest.on_failure_processor_type}}} with tag {{{_ingest.on_failure_processor_tag}}} in pipeline {{{_ingest.on_failure_pipeline}}} failed with message: {{{_ingest.on_failure_message}}}'
   - convert:
       tag: convert_json_ipv6_flow_label
       field: json.IPv6FlowLabel
@@ -876,11 +883,11 @@ processors:
       field: json.SourceCountry
       target_field: cloudflare_logpush.network_analytics.source.country
       ignore_missing: true
-  - set:
-      tag: set_source_geo_country_iso_code_60c57ee7
-      field: source.geo.country_iso_code
-      copy_from: cloudflare_logpush.network_analytics.source.country
-      ignore_empty_value: true
+  - uppercase:
+      tag: uppercase_source_geo_country_iso_code_60c57ee7
+      field: cloudflare_logpush.network_analytics.source.country
+      target_field: source.geo.country_iso_code
+      ignore_missing: true
   - rename:
       tag: rename_json_SourceGeoHash_to_cloudflare_logpush_network_analytics_source_geo_hash_1f37e21e
       field: json.SourceGeoHash
@@ -978,11 +985,18 @@ processors:
       tag: split_TCPOptions
       separator: ', *'
       if: ctx.json?.TCPOptions instanceof String && ctx.json.TCPOptions != ''
-  - rename:
-      tag: rename_json_TCPOptions_to_cloudflare_logpush_network_analytics_tcp_options_0cd59237
+  - convert:
+      tag: convert_json_tcp_options
       field: json.TCPOptions
       target_field: cloudflare_logpush.network_analytics.tcp.options
+      if: ctx.json?.TCPOptions != ''
+      type: long
       ignore_missing: true
+      on_failure:
+        - append:
+            tag: append_error_message_0cd59237
+            field: error.message
+            value: 'Processor {{{_ingest.on_failure_processor_type}}} with tag {{{_ingest.on_failure_processor_tag}}} in pipeline {{{_ingest.on_failure_pipeline}}} failed with message: {{{_ingest.on_failure_message}}}'
   - split:
       tag: split_json_TCPSACKBlocks_e086a612
       field: json.TCPSACKBlocks
